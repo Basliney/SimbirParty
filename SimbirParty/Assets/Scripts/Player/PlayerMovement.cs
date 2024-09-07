@@ -39,9 +39,6 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forward = Vector3.forward;  // _cameraTransform.forward;
         Vector3 right = Vector3.right;  // _cameraTransform.right;
 
-        //forward.y = 0f;
-        //right.y = 0f;
-
         forward.Normalize();
         right.Normalize();
 
@@ -51,14 +48,5 @@ public class PlayerMovement : MonoBehaviour
         Vector3 offset = direction * scaledMoveSpeed;
 
         transform.Translate(offset, Space.World);
-    }
-
-    private float GetAngleByDirection(Vector3 direction)
-    {
-        float angle = 0f;
-        direction *= 180;
-
-        angle = -90 + (direction.x + direction.z)/2;
-        return angle;
     }
 }
