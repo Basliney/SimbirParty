@@ -15,7 +15,7 @@ public class HealthController : MonoBehaviour
 
     void Start()
     {
-        _food = PlayerPrefs.GetInt("food", 100);
+        _food = PlayerPrefs.GetInt("food", 50);
         _alko = PlayerPrefs.GetInt("alko", 50);
 
         _foodSlider.value = _food;
