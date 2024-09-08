@@ -5,6 +5,7 @@ public class QueueHandler : MonoBehaviour
     private QueueControls _queueControls;
     public HumanControls humanControls;
     [SerializeField] private bool IsFree = false;
+    [SerializeField] private GameObject _queuePoint;
 
     public void Awake()
     {
@@ -22,11 +23,13 @@ public class QueueHandler : MonoBehaviour
 
         _queueControls.Remove(this.transform);
         IsFree = false;
+        _queuePoint?.SetActive(false);
         return true;
     }
 
     public void ReleasePlace()
     {
+        _queuePoint?.SetActive(true);
         IsFree = true;
         _queueControls.Add(this.transform);
     }
