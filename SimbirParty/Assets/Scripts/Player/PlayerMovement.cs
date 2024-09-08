@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerInput _playerInput;
     private Vector2 _moveDirection;
 
+    public bool canMove = true;
+
     private void Awake()
     {
         _playerInput = new PlayerInput();
@@ -16,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (canMove == false)
+            return;
+
         _moveDirection = _playerInput.Player.Move.ReadValue<Vector2>();
 
         Move();

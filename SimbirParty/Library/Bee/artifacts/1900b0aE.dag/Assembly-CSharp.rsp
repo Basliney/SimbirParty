@@ -117,6 +117,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
+-define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
@@ -366,6 +367,7 @@
 "Assets/Interactions/PlayerInput.cs"
 "Assets/Resources/ScoreEntity.cs"
 "Assets/Scripts/Camera/FollowLogic.cs"
+"Assets/Scripts/GameReaction/ReactionPlayer.cs"
 "Assets/Scripts/HumanControls.cs"
 "Assets/Scripts/LookAt.cs"
 "Assets/Scripts/Player/Interaction.cs"

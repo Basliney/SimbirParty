@@ -6,6 +6,7 @@ public class QueueTarget : MonoBehaviour
 {
     [SerializeField] private QueueHandler _queueHandler;
     [SerializeField] private float _releaseTime;
+    [SerializeField] public TypeTarget typeTarget;
 
     void Start()
     {
@@ -22,4 +23,11 @@ public class QueueTarget : MonoBehaviour
             _queueHandler.SelfRelease();
         }
     }
+}
+
+public enum TypeTarget
+{
+    Food,
+    Alko,
+    Quest
 }
